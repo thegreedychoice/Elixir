@@ -43,7 +43,7 @@ defmodule RpnTest do
   	assert :ok == Rpn.push(pid, 5)
   	assert :ok == Rpn.push(pid, 2)
   	assert :ok == Rpn.push(pid, :/)
-  	assert Rpn.peek(pid) == [2.0]
+  	assert Rpn.peek(pid) == [2.5]
   end
   test "wikipedia example" do
     {:ok, pid} = Rpn.start
@@ -52,7 +52,7 @@ defmodule RpnTest do
     assert :ok == Rpn.push(pid, 2)
     assert :ok == Rpn.push(pid, :+)
     assert :ok == Rpn.push(pid, 4)
-    assert :ok == Rpn.push(pid, :x)
+    assert :ok == Rpn.push(pid, :*)
     assert :ok == Rpn.push(pid, :+)
     assert :ok == Rpn.push(pid, 3)
     assert :ok == Rpn.push(pid, :-)
