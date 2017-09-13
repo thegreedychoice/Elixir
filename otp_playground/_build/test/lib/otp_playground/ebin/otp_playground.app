@@ -1,0 +1,10 @@
+{application,otp_playground,
+             [{applications,[kernel,stdlib,elixir,logger]},
+              {description,"otp_playground"},
+              {modules,['Elixir.OtpPlayground',
+                        'Elixir.OtpPlayground.Application',
+                        'Elixir.OtpPlayground.FridgeServer']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {extra_applications,[logger]},
+              {mod,{'Elixir.OtpPlayground.Application',[]}}]}.
